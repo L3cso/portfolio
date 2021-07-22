@@ -11,6 +11,3 @@ for (i in navButton) {
         navbar.classList.toggle('change');  
     });
 }
-// navButton.addEventListener('click', () => {
-//     navbar.classList.toggle('change');  
-// });

@@ -91,6 +91,12 @@ a {
     transition: opacity 100ms linear;
 }
 
+.top-button::before {
+    top: -100%;
+    transform: perspective(1.5em) rotateX(-50deg) scale(1, 0.4);
+
+}
+
 .button::after, .nav-button::after {
     content: '';
     position: absolute;
@@ -171,6 +177,10 @@ header {
     z-index: 1; 
     background-color: #302b18;
 }
+
+html {
+    scroll-padding-top: 4.5rem; /* height of sticky header */
+  }
 
 /*===================MENU======================*/
 
@@ -296,15 +306,24 @@ section {
 /*About section*/
 
 #about {
-    /* margin: auto; */
-    /* padding-top: 1.5em; */
-    /* height: 50vh; */
     background-color: hsl(48, 33%, 9%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* margin: 0 auto; */
+    position: relative;
 }
+
+section:target::before { 
+    display: block; 
+    content: ""; 
+    visibility: hidden; 
+    pointer-events: none;
+    height: 4.5rem;
+    margin-top: -4.5rem;
+  }
+
+
+
 
 /*Projects section*/
 
@@ -353,7 +372,7 @@ section {
 
 
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 780px) {
     .container {
         flex-direction: row;
         flex-wrap: wrap;
