@@ -11,7 +11,7 @@ dark background: 302b18 =   background-color: hsl(48, 33%, 14%);
 yellowish brownish passive color: 835c2b
 active yellow: fdb541  
 green button : 1bff80
-
+purple maybe fpr later: background:rgb( 127, 55, 128);
 */
 
 
@@ -179,7 +179,8 @@ header {
     top: 0;
     right: 0;
     transform: translateX(100%);
-    width: 50vw;
+    padding: 0 2em;
+    /* width: 60vw; */
     height: 100vh;
     background-color: hsl(48, 33%, 14%);
     transition: transform 300ms cubic-bezier(.5, 0, .5, 1);
@@ -214,7 +215,6 @@ nav a {
     left: -1.25em;
     top: 1.25em;
     cursor: pointer;
-    background:rgb( 127, 55, 128);
     transform: translateX(-100%);
     /* z-index: 2; */
     /* position: absolute;
@@ -258,7 +258,6 @@ nav a {
     height: 0.4em;
     position: relative;
     background-color: rgb( 27, 255, 128);
-    /* transform: scaleX(0%); */
     transform: rotate(405deg);
     
 }
@@ -314,9 +313,10 @@ section {
     flex-direction: column;
 }
 
-.iconContainer {
+.icon-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -335,7 +335,7 @@ section {
 
 .card:hover {
     box-shadow: 0 0 1em rgba(27, 255, 128, 0.5);
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 100ms linear;
 }
 
@@ -348,6 +348,9 @@ section {
 .card p {
     padding: 1em;
 }
+
+/*=====================SKILLS=============================*/
+
 
 
 @media only screen and (min-width: 750px) {
@@ -372,6 +375,7 @@ section {
         height: auto;
         width: auto;
         margin-left: auto;
+        transform: none;
     }
 
     nav ul {
